@@ -17,6 +17,16 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\ShowEXIF\command]
 @="powershell -NoExit -Command \"& 'C:\\Tools\\exiftool.exe' '%1'\""
 
+
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\ShowEXIF]
+@="EXIFを表示（ExifTool）"
+"Icon"="C:\\Tools\\exiftool.exe"
+
+[HKEY_CLASSES_ROOT\*\shell\ShowEXIF\command]
+@="powershell -NoExit -Command \"& 'C:\\Tools\\exiftool.exe' '%1'\""
+
 copy
 ③ add_exif_context.reg をＷクリックで、レジストリへ書き込まれる
 ※事前にregrditバックアップをする事
