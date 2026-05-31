@@ -83,10 +83,12 @@ Windows Registry Editor Version 5.00
 
 画像
 【ホルダー単位】
+
 <img width="445" height="583" alt="スクリーンショット 2026-05-26 233441" src="https://github.com/user-attachments/assets/c3f2212a-4914-4a8d-9f26-1757847b9ca9" />
 
 画像
 【ファイル単位】
+
 <img width="516" height="635" alt="スクリーンショット 2026-05-27 064839" src="https://github.com/user-attachments/assets/2a26f18a-8767-4f5f-b65e-afc5c5a00f26" />
 
 
