@@ -24,20 +24,21 @@ Windows Registry Editor Version 5.00
 
 ④ コレ回避するには、エクスプローラーを「クラシックメニューに戻す設定」をすると最初のコンテキに出現する。 名前を classic_menu.reg などにして保存し、実行する。
 
+```
 Windows Registry Editor Version 5.00
-
 [HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
 @=""
+```
 
-copy
 ⑤ 「Windows 11の新しいデザイン」に戻すには、以下のコマンドをコマンドプロンプトで実行
-
+```
 reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
-
-copy
+```
 以上
 
 画像
+<img width="1852" height="1468" alt="スクリーンショット 2026-05-26 212011" src="https://github.com/user-attachments/assets/982b6fa6-4390-452f-bd09-2404fd4c7a36" />
+
 これで「ShowEXIF」機能は宜しいのだが、最近、使用頻度の高い「VSCode」コンテキに問題発生‼️
 
 「クラシックメニュー設定」で、コンテキから消えた･･･「VSCode」
@@ -48,17 +49,14 @@ copy
 
 ① ホルダー単位 ⇒ コンテキ出現は
 ⇒ vscode_folder.reg を作ってRegedit書き込みする。
-
+```
 Windows Registry Editor Version 5.00
-
 ; フォルダを右クリックした時にVSCodeを出す設定
 [HKEY_CLASSES_ROOT\Directory\shell\VSCode]
 @="Open with Code"
 "Icon"="\"C:\\Users\\%USERNAME%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\""
-
 [HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]
 @="\"C:\\Users\\%USERNAME%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"%1\""
-
 ; フォルダ内の何もない背景を右クリックした時にVSCodeを出す設定
 [HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode]
 @="Open with Code"
@@ -66,11 +64,10 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode\command]
 @="\"C:\\Users\\%USERNAME%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"%V\""
-
-copy
+```
 ② ファイル単位 ⇒ コンテキ出現は
 ⇒ vscode_files.reg を作ってRegedit書き込みする。
-
+```
 Windows Registry Editor Version 5.00
 
 ; すべてのファイル(*)を右クリックした時にVSCodeを出す設定
@@ -81,28 +78,16 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\*\shell\VSCode\command]
 @="\"C:\\Users\\kawa\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"%1\""
 
-copy
+```
 
 
 画像
 【ホルダー単位】
+<img width="445" height="583" alt="スクリーンショット 2026-05-26 233441" src="https://github.com/user-attachments/assets/c3f2212a-4914-4a8d-9f26-1757847b9ca9" />
+
 画像
 【ファイル単位】
-
-尚、使用スクリプトコードは、見様見真似で作ったGITHUBに置いてある。
-
+<img width="516" height="635" alt="スクリーンショット 2026-05-27 064839" src="https://github.com/user-attachments/assets/2a26f18a-8767-4f5f-b65e-afc5c5a00f26" />
 
 
-
-そして･･･
-そして･･･
-そして･･･
-
-大発見が･･･
-
-「ShowEXIF」で、撮影情報を開くと･･･諦めてた「撮影日」情報があった‼️
-
-画像
-画像
-画像
 以上。
